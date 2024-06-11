@@ -18,11 +18,10 @@ await register.enterPassword(password);
 await register.enterConfirmPassword(password);
 // expect (register.issubscribedChecked()).toBeChecked();
 await register.clickTearmAndCondition();
-await register.clickContinueBtn();
-
-
 })
-test ("register test-01",async({page, baseURL})=>{
+
+
+test ("login test-02",async({page, baseURL})=>{
     await page.goto('${baseURL}route=account/login');
     const login =new loginPage(page);
 

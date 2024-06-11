@@ -48,11 +48,13 @@ export default class registerPage{
     async clickTearmAndCondition() {
         await this.page.check("#input-agree");
     }
-    async clickContinueBtn() {
+    async clickContinueToRegister() {
         await Promise.all([
             this.page.waitForNavigation({waitUntil:"networkidle"}),
              this.page.click("input[value='Continue']")
         ])
+
+        // this.page.click("input[value='Continue']")
         
     
     }
