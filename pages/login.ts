@@ -16,7 +16,7 @@ export default class loginPage{
         this.page.locator("#input-password").type(password);
 
     }
-    async enterEmail(email:string){
+    async ClickContinueBtn(){
 
         this.page.click("input[value='Login']");
 
