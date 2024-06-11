@@ -11,14 +11,15 @@ export default class loginPage{
         this.page.locator("#input-email").type(email);
 
     }
-    async enterPassword(password:string){
+    async enterLoginPassword(password:string){
 
         this.page.locator("#input-password").type(password);
 
     }
-    async ClickContinueBtn(){
-
-        this.page.click("input[value='Login']");
+    async ClickloginBtn(){
+        await Promise.all([
+            this.page.waitForNavigation();
+        await this.page.click("input[value='Login']");
 
     }
 

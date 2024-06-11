@@ -44,9 +44,16 @@ export default class registerPage{
 
          return await this.page.locator("#input-newsletter-no").isChecked();
     }
-    async clickContinueBtn() {
 
-        await this.page.click("input[value='Continue']");
+    async clickTearmAndCondition() {
+        await this.page.check("#input-agree");
+    }
+    async clickContinueBtn() {
+        await Promise.all([
+            this.page.waitForNavigation({waitUntil:"networkidle"}),
+             this.page.click("input[value='Continue']")
+        ])
+        
     
     }
 
